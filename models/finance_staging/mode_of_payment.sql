@@ -1,4 +1,5 @@
-with total_installment_payment AS(
+With 
+total_installment_payment AS(
      Select id, instalment_id, customer_id, mode_of_payment, 
 instalment_1_amount_paid, instalment_2_amount_paid, instalment_3_amount_paid,
 SUM(IFNULL (instalment_1_amount_paid, 0) + IFNULL (instalment_2_amount_paid, 0)
