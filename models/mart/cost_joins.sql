@@ -14,7 +14,7 @@ join
     {{ ref('cost_in_relation_to_promotion') }} pr
 on fad.id = pr.id
 join 
-    {{ ref('amount_paid_by-customers') }} fap
+    {{ ref('amount_paid_by_customers') }} fap
 on  fad.id = fap.id
 group by 
     Year, Month
