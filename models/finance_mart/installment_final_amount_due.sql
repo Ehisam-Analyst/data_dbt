@@ -7,7 +7,7 @@ SELECT
     SUM(i.quantity * b.product_price) AS Original_amount_due,
     CASE
         WHEN ist.number_of_instalments = 1 AND DATE_DIFF(pi.instalment_1_payment_date, pi.created_on, DAY) > 1 THEN 
-            SUM(i.quantity * b.product_price) + (SUM(i.quantity * b.product_price) * 0.005)
+            SUM(i.quantity * b.product_price) + (SUM(i.quantity * b.product_price) * {{ ref('instalment_penalty1')}})
         
         WHEN ist.number_of_instalments = 2 THEN 
             CASE 
@@ -21,7 +21,7 @@ SELECT
             CASE 
                 WHEN DATE_DIFF(pi.instalment_3_payment_date, pi.created_on, DAY) > 90 THEN 
                     SUM(i.quantity * b.product_price) + (SUM(i.quantity * b.product_price) * 0.015) + (SUM(i.quantity * b.product_price) * 0.01)
-                ELSE 
+                  ELSE 
                     SUM(i.quantity * b.product_price) + (SUM(i.quantity * b.product_price) * 0.015)
             END
         
