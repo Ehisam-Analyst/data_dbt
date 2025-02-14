@@ -1,0 +1,19 @@
+DROP VIEW `jubilee_groceries.cost_joins`;
+DROP VIEW `jubilee_groceries.bulk_buzzers`;
+DROP VIEW `jubilee_groceries.original_cost_of_item`;
+DROP VIEW `jubilee_groceries.discounts_1001`;
+DROP VIEW `jubilee_groceries.august_average`;
+DROP VIEW `jubilee_groceries.discounts_101`;
+DROP VIEW `jubilee_groceries.final_amount_due`;
+DROP VIEW `jubilee_groceries.september_average`;
+DROP VIEW `jubilee_groceries.cost_in_relation_to_promotion`;
+DROP VIEW `jubilee_groceries.eligible_bouncers`;
+DROP VIEW `jubilee_groceries.amount_paid_by_customers`;
+DROP VIEW `jubilee_groceries.discounts_10001`;
+DROP VIEW `jubilee_groceries.mode_of_payment`;
+DROP VIEW `jubilee_groceries.instalment_penalty1`;
+DROP VIEW `jubilee_groceries.over_due_date`;
+DROP VIEW `jubilee_groceries.instalment_penalty2`;
+DROP VIEW `jubilee_groceries.instalment_penalty3`;
+
+			
