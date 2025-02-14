@@ -1,4 +1,4 @@
-with over_due_date AS (
+with overdue_date AS (
     SELECT i.id, i.customer_id, i.created_on, i.instalment_1_payment_date, 
 i.instalment_2_payment_date, i.instalment_3_payment_date,
 CASE 
@@ -14,5 +14,4 @@ ON  i.instalment_id = ist.id
 group by i.id, customer_id, i.created_on, ist.number_of_instalments, 
 instalment_1_payment_date, instalment_2_payment_date, instalment_3_payment_date
 order by days_overdue Desc)
-select * from over_due_date
-#be careful
+select * from overdue_date
